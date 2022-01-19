@@ -7,3 +7,4 @@ resources:
   - release.yaml
   - postgres-release.yaml
   - seald-secret.yaml
+  - postgres-repo.yaml
