@@ -12,8 +12,13 @@ spec:
     kind: GitRepository
     name: flux-system 
   env:
-    - name: postgresqlPassword
-      valueFrom:
-        secretKeyRef:
-          name: basic-auth
-          key: encryptedData.password
+      - name: SECRET_USERNAME
+        valueFrom:
+          secretKeyRef:
+            name: basic-auth
+            key: user
+      - name: SECRET_PASSWORD
+        valueFrom:
+          secretKeyRef:
+            name: basic-auth
+            key: password
